@@ -1,0 +1,66 @@
+public class HuffmanNode implements Comparable<HuffmanNode> {
+  /* Represents the character denoted by this node */
+  Character inChar = null;
+  
+  /* Represents the frequency of all characters contained in this nodes subtree */
+  int frequency = 0;
+  
+  /* This nodes right child */
+  HuffmanNode right = null;
+  
+  /* This nodes left child */
+  HuffmanNode left = null;
+  
+  /* Path from the root node of the Huffman tree to this node in binary
+   * Initialized after tree is constructed */
+  String path = "";
+  
+  public HuffmanNode(Character inChar, int frequency) {
+    this.inChar = inChar;
+    this.frequency = frequency;
+  }
+  
+  public HuffmanNode(Character inChar, int frequency, HuffmanNode left, HuffmanNode right) {
+    this.inChar = inChar;
+    this.frequency = frequency;
+    this.right = right;
+    this.left = left;
+  }
+  
+  public int getFrequency() {
+    return frequency;
+  }
+  
+  public char getInChar() {
+    return inChar;
+  }
+  
+  public HuffmanNode getLeft() {
+    return left;
+  }
+  
+  public HuffmanNode getRight() {
+    return right;
+  }
+  
+  public void setPath(String path) {
+    this.path = path;
+  }
+  
+  public String getPath() {
+    return path;
+  }
+  
+  public boolean isLeafNode() {
+    if (inChar == null)
+      return false;
+    else
+      return true;
+  }
+  
+  /* Returns if this node is greater than the specified node */
+  public int compareTo(HuffmanNode node) {
+    return Integer.compare(this.frequency, node.frequency);
+  }
+   
+}
