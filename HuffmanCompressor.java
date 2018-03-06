@@ -51,13 +51,6 @@ public class HuffmanCompressor {
    * @return nodeList the list of sorted Huffman Nodes
    */
   public static ArrayList<HuffmanNode> findFrequency(String fileName) throws IOException {
-    System.out.println("wtf");
-    try {
-      InputStream in = new FileInputStream(fileName);
-    }
-    catch (IOException e) {
-      System.out.println("wtf");
-    }
     InputStream in = new FileInputStream(fileName);
     Reader reader = new InputStreamReader(in);
     int charASCIIvalue; //ASCII value of a character
