@@ -337,5 +337,3 @@ public class HuffmanCompressor {
   }
   
 }
-
-//java main method does not show string returned
